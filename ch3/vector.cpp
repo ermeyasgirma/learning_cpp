@@ -5,8 +5,20 @@ struct Vector3D {
     float x;
     float y;
     float z;
+
+
+    // Member function for multiplying two vectors
+    // eg v1 * otherV
+    Vector3D operator*(Vector3D &other) {
+        return Vector3D{
+            this->x * other.x,
+            this->y * other.y,
+            this->z * other.z
+        };
+    }
 };
 
+// Addition is a commmuative opetation so the order of the operands does not matter
 Vector3D operator+(Vector3D &a, Vector3D &b) {
     return Vector3D{
         a.x + b.x,
