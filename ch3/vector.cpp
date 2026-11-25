@@ -32,9 +32,12 @@ int main () {
     Vector3D b{4.0f, 5.0f, 6.0f};
     Vector3D c = a + b; 
 
-    cout << "c.x: " << c.x << endl;
-    cout << "c.y: " << c.y << endl;
-    cout << "c.z: " << c.z << endl;
+    // Structured binding declaration
+    auto [x1, y1, z1]{c}; 
+
+    cout << "x1: " << x1 << endl;
+    cout << "y1: " << y1 << endl;
+    cout << "z1: " << z1 << endl;
 
     return 0;
 }
